@@ -1,0 +1,600 @@
+{
+  "en": {
+    "nav": {
+      "about": "About",
+      "education": "Education",
+      "projects": "Projects",
+      "rides": "Rides",
+      "hikes": "Hikes",
+      "contact": "Contact"
+    },
+    "themeToggle": { "light": "Light", "dark": "Dark" },
+    "languageToggle": { "en": "EN", "de": "DE" },
+    "hero": {
+      "eyebrow": "Munich, Germany",
+      "name": "Andrii Seleznov",
+      "role": "Full-Stack Developer in the making",
+      "subtitle": "CS student at TUM who ends up building the whole thing end to end \u2014 firmware, backend, frontend \u2014 because splitting it up is less interesting.",
+      "primaryButton": "Say hello",
+      "secondaryButton": "See the work"
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "A bit about myself",
+      "paragraphOne": "I'm a Computer Science student at TU Munich, originally from Kharkiv, Ukraine. I like projects that touch hardware and software at the same time \u2014 an ESP32 that hosts its own web server, a flight controller running my own Lua scripts, a database server I keep alive myself.",
+      "paragraphTwo": "No paid job yet, so this site leans on what I've actually built: independent projects, coursework, and a lot of long rides and hikes when I need to think about something else for a while.",
+      "languagesTitle": "Languages",
+      "languages": [
+        { "name": "Ukrainian", "level": "Native" },
+        { "name": "Russian", "level": "Native" },
+        { "name": "English", "level": "C2" },
+        { "name": "German", "level": "C1" }
+      ],
+      "skillsTitle": "Tools I reach for",
+      "skills": ["JavaScript", "Go", "Java / Spring Boot", "C++", "C", "C#", "OCaml", "RISC-V Assembly", "Lua", "PostgreSQL", "Linux Administration", "Git"]
+    },
+    "education": {
+      "eyebrow": "Education",
+      "title": "Education",
+      "items": [
+        {
+          "institution": "Technische Universit\u00e4t M\u00fcnchen",
+          "degree": "B.Sc. Computer Science",
+          "period": "10/2025 \u2014 Present",
+          "location": "Munich, Germany",
+          "summary": "Currently in the first semesters, mixing theory with low-level systems work.",
+          "details": "The courses that stuck with me so far are the ones where the abstraction leaks: the computer architecture lab has a performance track where you optimize C for cache locality with nothing but bit tricks and stubbornness, and the RISC-V course finally made 'the computer doesn't know what a variable is' feel real instead of just a sentence in a textbook. Alongside that: algorithms and data structures, discrete structures, linear algebra, and an intro Java course built around polymorphism and writing actual unit tests instead of hoping for the best.",
+          "courses": ["Software Engineering Basics", "Computer Architecture Lab (performance track)", "Algorithms & Data Structures", "Intro to Computer Architecture (RISC-V/Assembly)", "Programming & Lab (Java)", "Discrete Structures", "Linear Algebra"]
+        },
+        {
+          "institution": "Kharkiv National University of Radio Electronics",
+          "degree": "B.Sc. Software Engineering (remote)",
+          "period": "08/2023 \u2014 02/2025",
+          "location": "Kharkiv, Ukraine \u2014 remote",
+          "summary": "Started my CS education remotely while the practical route through Germany was still being sorted out.",
+          "details": "Covered the fundamentals of software engineering and core computer science structures, with a strong object-oriented programming focus. This is where I first got comfortable reading someone else's class hierarchy without wanting to rewrite it immediately \u2014 mostly.",
+          "courses": ["Software Engineering Fundamentals", "OOP", "Core CS Structures"]
+        },
+        {
+          "institution": "Studienkolleg Bochum",
+          "degree": "Feststellungspr\u00fcfung (T-Kurs)",
+          "period": "08/2023 \u2014 01/2025",
+          "location": "Bochum, Germany",
+          "summary": "The year of learning German fast enough to also pass Physics in it.",
+          "details": "A preparatory program for international students to qualify for German university admission, technical track. Math and Physics were familiar ground; doing them in German while still learning the language was the actual exam.",
+          "courses": ["Mathematics", "Physics", "German", "Chemistry"]
+        },
+        {
+          "institution": "Online Gymnasium OPTIMA",
+          "degree": "Complete Secondary Education Certificate",
+          "period": "09/2020 \u2014 05/2022",
+          "location": "Kyiv, Ukraine",
+          "summary": "Finished school online, from a lyceum for physics and math originally.",
+          "details": "",
+          "courses": []
+        },
+        {
+          "institution": "Lyceum for Physics and Mathematics \u2116 27",
+          "degree": "Basic Secondary Education Certificate",
+          "period": "09/2012 \u2014 05/2020",
+          "location": "Kharkiv, Ukraine",
+          "summary": "Where the physics-and-math habit started.",
+          "details": "",
+          "courses": []
+        }
+      ]
+    },
+    "projects": {
+      "eyebrow": "Projects",
+      "title": "Things I've built",
+      "viewProject": "Open project",
+      "viewCode": "View on GitHub",
+      "items": [
+        {
+          "name": "Humanitarian Drone Development & Manufacturing",
+          "period": "02/2025 \u2014 Present",
+          "tagline": "Custom Lua flight-controller scripts and 3D-printed drop mechanisms.",
+          "description": "An ongoing independent project building functional hardware rather than demos. I write custom Lua scripts inside INAV flight-controller firmware to drive mechanical drop servos over the radio link, design the functional parts in FreeCAD, and 3D print them with manufacturing constraints in mind rather than just 'does it look right on screen'. I also wired an FS-iA6B receiver through a TTL-to-USB adapter on Linux so I can fly the actual physical remote inside a flight simulator before ever touching a real aircraft.",
+          "stack": ["Lua", "INAV Firmware", "FreeCAD", "3D Printing", "Linux"],
+          "github": ""
+        },
+        {
+          "name": "Real-Time Climbing Timer",
+          "period": "08/2024 \u2014 Present",
+          "tagline": "ESP32 firmware with a local web UI over WebSockets, built with two teammates.",
+          "description": "A three-person hardware project. I wrote the firmware in C++ on the ESP-IDF framework for direct, low-level control of the ESP32, then chased down audio playback glitches by moving task scheduling down to the FreeRTOS level instead of fighting it from above. The device hosts its own local web server over Wi-Fi, and the web UI talks to it in real time over WebSockets. I was solely responsible for the codebase while we split physical assembly and field testing as a team.",
+          "stack": ["C++", "ESP-IDF", "FreeRTOS", "WebSockets", "ESP32"],
+          "github": ""
+        },
+        {
+          "name": "own-drive \u2014 Cloud Storage Backend Prototype",
+          "period": "04/2024 \u2014 02/2025",
+          "tagline": "Rebuilt from Java/Spring Boot into Go once the boilerplate got old.",
+          "description": "Started in Java with Spring Boot, then rewritten from scratch in Go to cut down on boilerplate. Implements token-based authentication and simple chunked uploads over HTTP. Development stopped and started a few times \u2014 the kind of project that exists mainly to answer 'how would I actually build this' rather than to ship.",
+          "stack": ["Go", "Java", "Spring Boot", "HTTP"],
+          "github": ""
+        },
+        {
+          "name": "fzfexplorer \u2014 Desktop File Manager Prototype",
+          "period": "09/2024 \u2014 02/2025",
+          "tagline": "A Nautilus-styled desktop file manager built with Electron.",
+          "description": "A desktop UI in Electron and JavaScript, styled after Nautilus. It talks to the local filesystem through Node's fs API and uses drive-list for partition detection, so it behaves like a real file manager instead of a browser tab pretending to be one.",
+          "stack": ["Electron", "JavaScript", "Node.js"],
+          "github": ""
+        },
+        {
+          "name": "Framework Evaluations \u2014 Expense & Book Trackers",
+          "period": "11/2023 \u2014 02/2024",
+          "tagline": "Two small full-stack apps built to compare stacks, not to launch.",
+          "description": "An expense tracker built with Angular, DaisyUI on Tailwind, Spring Boot and PostgreSQL, and a book-tracking app pairing a React frontend with the same Spring Boot / PostgreSQL backend. Both were exercises in feeling out the difference between Angular's structure and React's flexibility before picking favorites.",
+          "stack": ["Angular", "React", "Spring Boot", "PostgreSQL", "Tailwind CSS"],
+          "github": ""
+        },
+        {
+          "name": "Local Server Infrastructure",
+          "period": "08/2024 \u2014 Present",
+          "tagline": "A headless Debian box on the home network, kept alive over SSH.",
+          "description": "Set up and maintain a headless Debian mini PC on the home network, administered entirely over SSH. Runs PostgreSQL as a systemd background service, giving me a local data layer for whatever I'm experimenting with that week.",
+          "stack": ["Debian", "PostgreSQL", "systemd", "SSH"],
+          "github": ""
+        }
+      ]
+    },
+    "rides": {
+      "eyebrow": "Long Rides",
+      "title": "Where the bike has been",
+      "subtitle": "200\u2013300km days, mostly out of Munich. Click a route to open its story; click a dot to jump to the photo.",
+      "backToMap": "Back to map",
+      "closeSidebar": "Close",
+      "distance": "Distance",
+      "elevation": "Elevation gain",
+      "date": "Date",
+      "photosLabel": "Photos along the way",
+      "items": [
+        {
+          "id": "chiemsee-loop",
+          "name": "Munich \u2013 Chiemsee Loop",
+          "date": "June 2025",
+          "distance": "228 km",
+          "elevation": "980 m",
+          "summary": "A long clockwise loop out to the lake and back, mostly flat until the last 40km.",
+          "story": "Left before sunrise to beat the heat, which worked for about three hours. The route follows the Mangfall valley out, skirts the Chiemsee long enough for a swim break, then comes back through rolling farmland that looks flat on the map and is absolutely not flat on the bike. Legs were done at kilometer 190; the last 38 were negotiation.",
+          "route": [
+            [48.1351, 11.5820],
+            [48.0450, 11.7200],
+            [47.9700, 11.9500],
+            [47.8748, 12.1500],
+            [47.8748, 12.4136],
+            [47.9200, 12.2000],
+            [48.0100, 11.9000],
+            [48.0900, 11.7300],
+            [48.1351, 11.5820]
+          ],
+          "photoPoints": [
+            { "coord": [47.9700, 11.9500], "image": 0 },
+            { "coord": [47.8748, 12.4136], "image": 1 },
+            { "coord": [48.0100, 11.9000], "image": 2 }
+          ]
+        },
+        {
+          "id": "tegernsee-alpine",
+          "name": "Tegernsee Alpine Rollercoaster",
+          "date": "August 2025",
+          "distance": "192 km",
+          "elevation": "2140 m",
+          "summary": "Less distance, way more climbing \u2014 the foothills version of a long day.",
+          "story": "Traded flat kilometers for vertical ones. The climb out of Gmund is short but rude, and the descent toward Tegernsee is the kind you replay in your head afterward. Stopped at a bakery in Bad Wiessee that I'm pretty sure kept me upright for the ride home.",
+          "route": [
+            [48.1351, 11.5820],
+            [48.0200, 11.6100],
+            [47.9200, 11.6800],
+            [47.7150, 11.7550],
+            [47.7500, 11.8200],
+            [47.8800, 11.7100],
+            [48.0100, 11.6400],
+            [48.1351, 11.5820]
+          ],
+          "photoPoints": [
+            { "coord": [47.7150, 11.7550], "image": 0 },
+            { "coord": [47.7500, 11.8200], "image": 1 }
+          ]
+        },
+        {
+          "id": "danube-path",
+          "name": "Danube Cycle Path to Regensburg",
+          "date": "September 2025",
+          "distance": "301 km",
+          "elevation": "760 m",
+          "summary": "Flat, fast, and the closest thing to a straight line I've ridden.",
+          "story": "Point to point instead of a loop \u2014 train back from Regensburg with the bike in the luggage rack. The Danube path is about as forgiving as long rides get, which meant this one was a distance problem, not a climbing problem. Camped one night just past Ingolstadt.",
+          "route": [
+            [48.1351, 11.5820],
+            [48.3000, 11.5400],
+            [48.5000, 11.6200],
+            [48.7650, 11.4250],
+            [48.9200, 11.6000],
+            [49.0134, 12.1016]
+          ],
+          "photoPoints": [
+            { "coord": [48.7650, 11.4250], "image": 0 },
+            { "coord": [48.9200, 11.6000], "image": 1 },
+            { "coord": [49.0134, 12.1016], "image": 2 }
+          ]
+        }
+      ]
+    },
+    "hikes": {
+      "eyebrow": "Alpine Hikes",
+      "title": "Shorter, steeper, more photos",
+      "subtitle": "Under 50km but rarely under 1000m of climbing.",
+      "openHike": "Open hike",
+      "distance": "Distance",
+      "elevation": "Elevation gain",
+      "date": "Date",
+      "items": [
+        {
+          "id": "watzmann-ridge",
+          "name": "Watzmann Ridge",
+          "date": "July 2025",
+          "distance": "22 km",
+          "elevation": "2100 m",
+          "summary": "The exposed ridge everyone warns you about, for good reason.",
+          "story": "Started at 4am from Kuhroint to catch the ridge before the afternoon storms that build up almost every day in summer. The exposure on the middle section is real \u2014 there's a stretch where you stop taking photos because both hands are occupied. Came down via Watzmannhaus, legs finished, views absolutely not overrated.",
+          "route": [
+            [47.5900, 12.9300],
+            [47.5700, 12.9200],
+            [47.5550, 12.9280],
+            [47.5450, 12.9350]
+          ]
+        },
+        {
+          "id": "karwendel-crossing",
+          "name": "Karwendel Crossing",
+          "date": "August 2025",
+          "distance": "34 km",
+          "elevation": "1850 m",
+          "summary": "Two valleys, one ridge, and a hut lunch that was worth the detour.",
+          "story": "A point-to-point crossing rather than a there-and-back, planned around a hut that apparently makes its own K\u00e4sesp\u00e4tzle. It does, and it was worth the extra 300m of climbing to reach it. Weather held the entire day, which almost never happens up there.",
+          "route": [
+            [47.4200, 11.4500],
+            [47.4000, 11.4800],
+            [47.3850, 11.5200],
+            [47.3700, 11.5600]
+          ]
+        },
+        {
+          "id": "zugspitze-approach",
+          "name": "Zugspitze via Reintal",
+          "date": "September 2025",
+          "distance": "28 km",
+          "elevation": "2200 m",
+          "summary": "The long, quiet approach instead of the cable car.",
+          "story": "Reintal is the least crowded way up and it shows \u2014 saw maybe a dozen people all day until the summit itself, which was the usual circus. Overnighted at Knorrh\u00fctte to split the climbing across two days instead of destroying my knees in one.",
+          "route": [
+            [47.4700, 11.1400],
+            [47.4400, 11.1200],
+            [47.4200, 11.0900],
+            [47.4211, 10.9853]
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Say hello",
+      "subtitle": "Open to working student roles, internships, and interesting problems in general.",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "Your email",
+      "messagePlaceholder": "What's on your mind?",
+      "sendButton": "Send message",
+      "sentMessage": "Sent \u2014 thanks, I'll reply soon.",
+      "email": "andriiseleznovukr@gmail.com",
+      "location": "Munich, Germany",
+      "linkedin": "LinkedIn"
+    },
+    "footer": {
+      "builtWith": "Built with React, Leaflet and too much coffee.",
+      "backToTop": "Back to top"
+    },
+    "lightbox": { "close": "Close" }
+  },
+  "de": {
+    "nav": {
+      "about": "\u00dcber mich",
+      "education": "Ausbildung",
+      "projects": "Projekte",
+      "rides": "Radtouren",
+      "hikes": "Wanderungen",
+      "contact": "Kontakt"
+    },
+    "themeToggle": { "light": "Hell", "dark": "Dunkel" },
+    "languageToggle": { "en": "EN", "de": "DE" },
+    "hero": {
+      "eyebrow": "M\u00fcnchen, Deutschland",
+      "name": "Andrii Seleznov",
+      "role": "Full-Stack-Entwickler in Ausbildung",
+      "subtitle": "Informatikstudent an der TUM, der am Ende doch alles selbst baut \u2014 Firmware, Backend, Frontend \u2014 weil Aufteilen weniger interessant ist.",
+      "primaryButton": "Kontakt aufnehmen",
+      "secondaryButton": "Projekte ansehen"
+    },
+    "about": {
+      "eyebrow": "\u00dcber mich",
+      "title": "Ein bisschen \u00fcber mich",
+      "paragraphOne": "Ich studiere Informatik an der TU M\u00fcnchen, urspr\u00fcnglich aus Charkiw, Ukraine. Am liebsten arbeite ich an Projekten, bei denen Hardware und Software gleichzeitig eine Rolle spielen \u2014 ein ESP32, der seinen eigenen Webserver hostet, ein Flugcontroller mit eigenen Lua-Skripten, ein Datenbankserver, den ich selbst am Laufen halte.",
+      "paragraphTwo": "Noch kein bezahlter Job, deshalb st\u00fctzt sich diese Seite auf das, was ich tats\u00e4chlich gebaut habe: eigenst\u00e4ndige Projekte, Studieninhalte und viele lange Rad- und Wandertouren, wenn ich mal an etwas anderes denken muss.",
+      "languagesTitle": "Sprachen",
+      "languages": [
+        { "name": "Ukrainisch", "level": "Muttersprache" },
+        { "name": "Russisch", "level": "Muttersprache" },
+        { "name": "Englisch", "level": "C2" },
+        { "name": "Deutsch", "level": "C1" }
+      ],
+      "skillsTitle": "Werkzeuge, die ich nutze",
+      "skills": ["JavaScript", "Go", "Java / Spring Boot", "C++", "C", "C#", "OCaml", "RISC-V Assembly", "Lua", "PostgreSQL", "Linux-Administration", "Git"]
+    },
+    "education": {
+      "eyebrow": "Ausbildung",
+      "title": "Ausbildung",
+      "items": [
+        {
+          "institution": "Technische Universit\u00e4t M\u00fcnchen",
+          "degree": "B.Sc. Informatik",
+          "period": "10/2025 \u2014 Aktuell",
+          "location": "M\u00fcnchen, Deutschland",
+          "summary": "Aktuell in den ersten Semestern, Theorie gemischt mit hardwarenaher Arbeit.",
+          "details": "Die Kurse, die bisher am meisten h\u00e4ngen geblieben sind, sind die, bei denen die Abstraktion l\u00f6chrig wird: Das Grundlagenpraktikum Rechnerarchitektur hat einen Performance-Pfad, bei dem man C-Code allein mit Cache-Locality und Bit-Tricks optimiert, und der RISC-V-Kurs hat den Satz 'der Computer wei\u00df nicht, was eine Variable ist' endlich real gemacht. Dazu: Algorithmen und Datenstrukturen, Diskrete Strukturen, Lineare Algebra und ein Einf\u00fchrungskurs in Java mit Fokus auf Polymorphie und echten Unit-Tests.",
+          "courses": ["Grundlagen der Softwaretechnik", "Grundlagenpraktikum Rechnerarchitektur (Performance-Pfad)", "Algorithmen und Datenstrukturen", "Einf\u00fchrung in die Rechnerarchitektur (RISC-V/Assembly)", "Einf\u00fchrung in die Programmierung & Praktikum (Java)", "Diskrete Strukturen", "Lineare Algebra"]
+        },
+        {
+          "institution": "Nationale Universit\u00e4t f\u00fcr Radioelektronik Charkiw",
+          "degree": "B.Sc. Softwareentwicklung (Fernstudium)",
+          "period": "08/2023 \u2014 02/2025",
+          "location": "Charkiw, Ukraine \u2014 remote",
+          "summary": "Begann mein Informatikstudium remote, w\u00e4hrend der praktische Weg nach Deutschland noch gekl\u00e4rt wurde.",
+          "details": "Grundlagen des Software-Engineerings und Kernstrukturen der Informatik, mit starkem Fokus auf objektorientierte Programmierung. Hier habe ich zum ersten Mal gelernt, fremde Klassenhierarchien zu lesen, ohne sie sofort neu schreiben zu wollen \u2014 meistens.",
+          "courses": ["Grundlagen des Software-Engineerings", "OOP", "Kernstrukturen der Informatik"]
+        },
+        {
+          "institution": "Studienkolleg Bochum",
+          "degree": "Feststellungspr\u00fcfung (T-Kurs)",
+          "period": "08/2023 \u2014 01/2025",
+          "location": "Bochum, Deutschland",
+          "summary": "Das Jahr, in dem ich Deutsch schnell genug lernte, um auch Physik darin zu bestehen.",
+          "details": "Ein Studienkolleg zur Vorbereitung internationaler Studierender auf die Hochschulzulassung, technischer Kurs. Mathe und Physik waren vertraut; beides auf Deutsch zu machen, w\u00e4hrend ich die Sprache noch lernte, war die eigentliche Pr\u00fcfung.",
+          "courses": ["Mathematik", "Physik", "Deutsch", "Chemie"]
+        },
+        {
+          "institution": "Online-Gymnasium OPTIMA",
+          "degree": "Zeugnis der vollst\u00e4ndigen allgemeinen mittleren Bildung",
+          "period": "09/2020 \u2014 05/2022",
+          "location": "Kyiw, Ukraine",
+          "summary": "Schule online abgeschlossen, urspr\u00fcnglich von einem Lyzeum f\u00fcr Physik und Mathematik.",
+          "details": "",
+          "courses": []
+        },
+        {
+          "institution": "Lyzeum f\u00fcr Physik und Mathematik \u2116 27",
+          "degree": "Zeugnis der basischen allgemeinen mittleren Bildung",
+          "period": "09/2012 \u2014 05/2020",
+          "location": "Charkiw, Ukraine",
+          "summary": "Wo die Physik-und-Mathe-Gewohnheit begann.",
+          "details": "",
+          "courses": []
+        }
+      ]
+    },
+    "projects": {
+      "eyebrow": "Projekte",
+      "title": "Dinge, die ich gebaut habe",
+      "viewProject": "Projekt \u00f6ffnen",
+      "viewCode": "Auf GitHub ansehen",
+      "items": [
+        {
+          "name": "Humanit\u00e4re Drohnenentwicklung & Fertigung",
+          "period": "02/2025 \u2014 Aktuell",
+          "tagline": "Eigene Lua-Skripte im Flugcontroller und 3D-gedruckte Abwurfmechanismen.",
+          "description": "Ein laufendes eigenst\u00e4ndiges Projekt, bei dem echte Hardware statt Demos entsteht. Ich schreibe eigene Lua-Skripte in der INAV-Flugcontroller-Firmware, um mechanische Abwurf-Servos \u00fcber die Funkstrecke zu steuern, konstruiere die funktionalen Teile in FreeCAD und drucke sie unter Fertigungsgesichtspunkten statt nur nach Bildschirmoptik. Au\u00dferdem habe ich einen FS-iA6B-Empf\u00e4nger \u00fcber einen TTL-zu-USB-Adapter unter Linux angebunden, um die echte Fernbedienung im Flugsimulator zu nutzen, bevor ein echtes Fluger\u00e4t angefasst wird.",
+          "stack": ["Lua", "INAV Firmware", "FreeCAD", "3D-Druck", "Linux"],
+          "github": ""
+        },
+        {
+          "name": "Echtzeit-Klettertimer",
+          "period": "08/2024 \u2014 Aktuell",
+          "tagline": "ESP32-Firmware mit lokalem Web-UI \u00fcber WebSockets, im Dreierteam gebaut.",
+          "description": "Ein Teamprojekt zu dritt. Ich habe die Firmware in C++ mit dem ESP-IDF-Framework f\u00fcr direkte, hardwarenahe Steuerung des ESP32 geschrieben und Audio-Aussetzer behoben, indem ich das Task-Scheduling auf FreeRTOS-Ebene verlagert habe, statt von oben dagegen anzuk\u00e4mpfen. Das Ger\u00e4t hostet seinen eigenen lokalen Webserver via Wi-Fi, das Web-UI kommuniziert in Echtzeit \u00fcber WebSockets. Ich war allein f\u00fcr die Codebasis verantwortlich, w\u00e4hrend wir uns physische Montage und Feldtests im Team geteilt haben.",
+          "stack": ["C++", "ESP-IDF", "FreeRTOS", "WebSockets", "ESP32"],
+          "github": ""
+        },
+        {
+          "name": "own-drive \u2014 Cloud-Speicher-Backend-Prototyp",
+          "period": "04/2024 \u2014 02/2025",
+          "tagline": "Von Java/Spring Boot komplett nach Go neu geschrieben, als der Boilerplate nervte.",
+          "description": "Zun\u00e4chst in Java mit Spring Boot begonnen, dann komplett in Go neu geschrieben, um Boilerplate-Code zu reduzieren. Implementiert tokenbasierte Authentifizierung und einfache Chunked-Uploads \u00fcber HTTP. Die Entwicklung wurde mehrfach unterbrochen \u2014 ein Projekt, das vor allem existiert, um 'wie w\u00fcrde ich das eigentlich bauen' zu beantworten, statt fertig ausgeliefert zu werden.",
+          "stack": ["Go", "Java", "Spring Boot", "HTTP"],
+          "github": ""
+        },
+        {
+          "name": "fzfexplorer \u2014 Desktop-Dateimanager-Prototyp",
+          "period": "09/2024 \u2014 02/2025",
+          "tagline": "Ein im Nautilus-Design gehaltener Desktop-Dateimanager mit Electron.",
+          "description": "Eine Desktop-Oberfl\u00e4che mit Electron und JavaScript im Nautilus-Design. Sie spricht \u00fcber die Node.js-fs-API direkt mit dem lokalen Dateisystem und nutzt drive-list zur Partitionserkennung \u2014 sie verh\u00e4lt sich also wie ein echter Dateimanager statt wie ein Browsertab, der einen spielt.",
+          "stack": ["Electron", "JavaScript", "Node.js"],
+          "github": ""
+        },
+        {
+          "name": "Framework-Evaluationen \u2014 Ausgaben- & Buch-Tracker",
+          "period": "11/2023 \u2014 02/2024",
+          "tagline": "Zwei kleine Full-Stack-Apps zum Vergleichen von Stacks, nicht zum Launchen.",
+          "description": "Ein Ausgaben-Tracker mit Angular, DaisyUI auf Tailwind, Spring Boot und PostgreSQL, sowie eine Buch-Tracking-App mit React-Frontend auf demselben Spring-Boot-/PostgreSQL-Backend. Beide waren \u00dcbungen, um den Unterschied zwischen Angulars Struktur und Reacts Flexibilit\u00e4t zu sp\u00fcren, bevor ich mich entschieden habe.",
+          "stack": ["Angular", "React", "Spring Boot", "PostgreSQL", "Tailwind CSS"],
+          "github": ""
+        },
+        {
+          "name": "Lokale Server-Infrastruktur",
+          "period": "08/2024 \u2014 Aktuell",
+          "tagline": "Ein headless Debian-Mini-PC im Heimnetzwerk, am Laufen gehalten \u00fcber SSH.",
+          "description": "Aufsetzen und Warten eines headless Debian-Mini-PCs im Heimnetzwerk, komplett \u00fcber SSH administriert. L\u00e4uft mit PostgreSQL als systemd-Hintergrunddienst und liefert mir eine lokale Datenschicht f\u00fcr das jeweilige Experiment der Woche.",
+          "stack": ["Debian", "PostgreSQL", "systemd", "SSH"],
+          "github": ""
+        }
+      ]
+    },
+    "rides": {
+      "eyebrow": "Lange Radtouren",
+      "title": "Wo das Rad schon war",
+      "subtitle": "200\u2013300 km am St\u00fcck, meist ab M\u00fcnchen. Route anklicken f\u00fcr die Geschichte, Punkt anklicken f\u00fcr das Foto.",
+      "backToMap": "Zur\u00fcck zur Karte",
+      "closeSidebar": "Schlie\u00dfen",
+      "distance": "Distanz",
+      "elevation": "H\u00f6henmeter",
+      "date": "Datum",
+      "photosLabel": "Fotos unterwegs",
+      "items": [
+        {
+          "id": "chiemsee-loop",
+          "name": "M\u00fcnchen \u2013 Chiemsee-Runde",
+          "date": "Juni 2025",
+          "distance": "228 km",
+          "elevation": "980 m",
+          "summary": "Eine lange Runde im Uhrzeigersinn zum See und zur\u00fcck, bis auf die letzten 40 km flach.",
+          "story": "Vor Sonnenaufgang losgefahren, um der Hitze zu entkommen \u2014 hat etwa drei Stunden funktioniert. Die Route folgt dem Mangfalltal hin, streift den Chiemsee lange genug f\u00fcr eine Schwimmpause und f\u00fchrt dann durch hugeliges Ackerland zur\u00fcck, das auf der Karte flach aussieht und auf dem Rad absolut nicht flach ist. Bei Kilometer 190 waren die Beine fertig; die letzten 38 waren Verhandlungssache.",
+          "route": [
+            [48.1351, 11.5820],
+            [48.0450, 11.7200],
+            [47.9700, 11.9500],
+            [47.8748, 12.1500],
+            [47.8748, 12.4136],
+            [47.9200, 12.2000],
+            [48.0100, 11.9000],
+            [48.0900, 11.7300],
+            [48.1351, 11.5820]
+          ],
+          "photoPoints": [
+            { "coord": [47.9700, 11.9500], "image": 0 },
+            { "coord": [47.8748, 12.4136], "image": 1 },
+            { "coord": [48.0100, 11.9000], "image": 2 }
+          ]
+        },
+        {
+          "id": "tegernsee-alpine",
+          "name": "Tegernsee Alpen-Achterbahn",
+          "date": "August 2025",
+          "distance": "192 km",
+          "elevation": "2140 m",
+          "summary": "Weniger Distanz, deutlich mehr H\u00f6henmeter \u2014 die Voralpen-Version eines langen Tages.",
+          "story": "Flache Kilometer gegen H\u00f6henmeter getauscht. Der Anstieg aus Gmund raus ist kurz aber unversch\u00e4mt, und die Abfahrt Richtung Tegernsee ist die Art, die man danach im Kopf nochmal f\u00e4hrt. Pause in einer B\u00e4ckerei in Bad Wiessee, die mich vermutlich f\u00fcr die R\u00fcckfahrt am Laufen gehalten hat.",
+          "route": [
+            [48.1351, 11.5820],
+            [48.0200, 11.6100],
+            [47.9200, 11.6800],
+            [47.7150, 11.7550],
+            [47.7500, 11.8200],
+            [47.8800, 11.7100],
+            [48.0100, 11.6400],
+            [48.1351, 11.5820]
+          ],
+          "photoPoints": [
+            { "coord": [47.7150, 11.7550], "image": 0 },
+            { "coord": [47.7500, 11.8200], "image": 1 }
+          ]
+        },
+        {
+          "id": "danube-path",
+          "name": "Donauradweg nach Regensburg",
+          "date": "September 2025",
+          "distance": "301 km",
+          "elevation": "760 m",
+          "summary": "Flach, schnell und die geradeste Linie, die ich je gefahren bin.",
+          "story": "Diesmal von Punkt zu Punkt statt einer Runde \u2014 Zug zur\u00fcck von Regensburg mit dem Rad im Abteil. Der Donauradweg ist so gutm\u00fctig, wie lange Touren nur sein k\u00f6nnen, deshalb war das hier ein Distanzproblem, kein Anstiegsproblem. Eine Nacht kurz hinter Ingolstadt gezeltet.",
+          "route": [
+            [48.1351, 11.5820],
+            [48.3000, 11.5400],
+            [48.5000, 11.6200],
+            [48.7650, 11.4250],
+            [48.9200, 11.6000],
+            [49.0134, 12.1016]
+          ],
+          "photoPoints": [
+            { "coord": [48.7650, 11.4250], "image": 0 },
+            { "coord": [48.9200, 11.6000], "image": 1 },
+            { "coord": [49.0134, 12.1016], "image": 2 }
+          ]
+        }
+      ]
+    },
+    "hikes": {
+      "eyebrow": "Alpine Wanderungen",
+      "title": "K\u00fcrzer, steiler, mehr Fotos",
+      "subtitle": "Unter 50 km, aber selten unter 1000 H\u00f6henmetern.",
+      "openHike": "Wanderung \u00f6ffnen",
+      "distance": "Distanz",
+      "elevation": "H\u00f6henmeter",
+      "date": "Datum",
+      "items": [
+        {
+          "id": "watzmann-ridge",
+          "name": "Watzmann-\u00dcberschreitung",
+          "date": "Juli 2025",
+          "distance": "22 km",
+          "elevation": "2100 m",
+          "summary": "Der ausgesetzte Grat, vor dem alle warnen \u2014 zu Recht.",
+          "story": "Start um 4 Uhr ab Kuhroint, um den Grat vor den Nachmittagsgewittern zu schaffen, die im Sommer fast t\u00e4glich aufziehen. Die Ausgesetztheit im Mittelteil ist real \u2014 eine Stelle, an der man aufh\u00f6rt zu fotografieren, weil beide H\u00e4nde besch\u00e4ftigt sind. Abstieg \u00fcber das Watzmannhaus, Beine fertig, Aussicht absolut nicht \u00fcberbewertet.",
+          "route": [
+            [47.5900, 12.9300],
+            [47.5700, 12.9200],
+            [47.5550, 12.9280],
+            [47.5450, 12.9350]
+          ]
+        },
+        {
+          "id": "karwendel-crossing",
+          "name": "Karwendel-\u00dcberschreitung",
+          "date": "August 2025",
+          "distance": "34 km",
+          "elevation": "1850 m",
+          "summary": "Zwei T\u00e4ler, ein Grat, und ein H\u00fcttenessen, das den Umweg wert war.",
+          "story": "Eine \u00dcberschreitung statt Hin-und-zur\u00fcck, geplant um eine H\u00fctte herum, die angeblich eigene K\u00e4sesp\u00e4tzle macht. Stimmt, und die zus\u00e4tzlichen 300 H\u00f6henmeter waren es wert. Das Wetter hielt den ganzen Tag \u2014 was dort oben fast nie passiert.",
+          "route": [
+            [47.4200, 11.4500],
+            [47.4000, 11.4800],
+            [47.3850, 11.5200],
+            [47.3700, 11.5600]
+          ]
+        },
+        {
+          "id": "zugspitze-approach",
+          "name": "Zugspitze \u00fcber das Reintal",
+          "date": "September 2025",
+          "distance": "28 km",
+          "elevation": "2200 m",
+          "summary": "Der lange, ruhige Weg hinauf statt der Seilbahn.",
+          "story": "Das Reintal ist der am wenigsten \u00fcberlaufene Weg nach oben, und man merkt es \u2014 vielleicht ein Dutzend Leute den ganzen Tag, bis der Gipfel selbst wieder der \u00fcbliche Zirkus war. \u00dcbernachtung auf der Knorrh\u00fctte, um den Anstieg auf zwei Tage zu verteilen statt die Knie an einem zu ruinieren.",
+          "route": [
+            [47.4700, 11.1400],
+            [47.4400, 11.1200],
+            [47.4200, 11.0900],
+            [47.4211, 10.9853]
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Kontakt",
+      "title": "Hallo sagen",
+      "subtitle": "Offen f\u00fcr Werkstudentenstellen, Praktika und interessante Probleme im Allgemeinen.",
+      "namePlaceholder": "Dein Name",
+      "emailPlaceholder": "Deine E-Mail",
+      "messagePlaceholder": "Was besch\u00e4ftigt dich?",
+      "sendButton": "Nachricht senden",
+      "sentMessage": "Gesendet \u2014 danke, ich melde mich bald.",
+      "email": "andriiseleznovukr@gmail.com",
+      "location": "M\u00fcnchen, Deutschland",
+      "linkedin": "LinkedIn"
+    },
+    "footer": {
+      "builtWith": "Gebaut mit React, Leaflet und zu viel Kaffee.",
+      "backToTop": "Nach oben"
+    },
+    "lightbox": { "close": "Schlie\u00dfen" }
+  }
+}
