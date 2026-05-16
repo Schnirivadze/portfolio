@@ -1,0 +1,122 @@
+.header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 10px 12px 10px 20px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg-elevated) 80%, transparent);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: padding 0.3s ease, gap 0.3s ease;
+}
+
+.header-scrolled {
+  padding: 6px 10px 6px 18px;
+  gap: 22px;
+}
+
+.header-brand {
+  background: none;
+  border: none;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav button {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.header-nav button:hover {
+  color: var(--accent);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-pill {
+  border: 1px solid var(--border);
+  background: var(--bg-sunken);
+  color: var(--text);
+  border-radius: 999px;
+  width: 36px;
+  height: 36px;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  transition: border-color 0.2s ease;
+}
+
+.header-pill:hover {
+  border-color: var(--accent);
+}
+
+.header-burger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--text);
+}
+
+.header-mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.header-mobile-menu button {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  font-family: var(--font-display);
+  color: var(--text);
+}
+
+.header-close {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  font-size: 1.4rem !important;
+}
+
+@media (max-width: 900px) {
+  .header-nav {
+    display: none;
+  }
+  .header-burger {
+    display: block;
+  }
+  .header {
+    left: var(--edge);
+    right: var(--edge);
+    transform: none;
+    width: calc(100% - 2 * var(--edge));
+    justify-content: space-between;
+  }
+}
