@@ -1,0 +1,66 @@
+.projects-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin: 12px 0 56px;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+
+.project-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.project-panel-reversed {
+  direction: rtl;
+}
+
+.project-panel-reversed > * {
+  direction: ltr;
+}
+
+.project-panel-image {
+  aspect-ratio: 4 / 3;
+  min-height: unset;
+}
+
+.project-panel-period {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+.project-panel-text h3 {
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  margin: 10px 0 14px;
+}
+
+.project-panel-text p {
+  margin-bottom: 18px;
+}
+
+.project-panel-text .skill-tags {
+  margin-bottom: 20px;
+}
+
+.project-panel-link {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .project-panel,
+  .project-panel-reversed {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+}
