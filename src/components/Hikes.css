@@ -1,0 +1,63 @@
+.hikes-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin: 12px 0 10px;
+}
+
+.hikes-subtitle {
+  margin-bottom: 36px;
+}
+
+.hike-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.hike-card {
+  text-align: left;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  padding: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hike-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.hike-card-image {
+  min-height: 180px;
+  border-radius: 0;
+}
+
+.hike-card-body {
+  padding: 22px;
+}
+
+.hike-card-body h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.hike-card-meta {
+  display: flex;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.hike-card-body p {
+  margin-bottom: 16px;
+  font-size: 0.92rem;
+}
+
+.hike-card-cta {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.9rem;
+}

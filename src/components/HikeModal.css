@@ -1,0 +1,78 @@
+.hike-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.hike-modal {
+  width: min(920px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--bg);
+  border-radius: var(--radius-lg);
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+.hike-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  font-size: 1.3rem;
+  color: var(--text-muted);
+}
+
+.hike-modal-close:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.hike-modal-map {
+  height: 280px;
+  width: 100%;
+}
+
+.hike-modal-body {
+  padding: 32px clamp(20px, 5vw, 48px) 48px;
+}
+
+.hike-modal-body h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 14px;
+}
+
+.hike-modal-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+.hike-modal-story {
+  margin-bottom: 28px;
+}
+
+.hike-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.hike-gallery-image {
+  height: 140px;
+  min-height: unset;
+}
