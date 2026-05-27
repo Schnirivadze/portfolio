@@ -80,6 +80,7 @@ p {
   margin: 0 auto;
   padding: 120px var(--edge);
   position: relative;
+  scroll-margin-top: 100px;
 }
 
 .eyebrow {
