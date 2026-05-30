@@ -44,14 +44,14 @@ export default function Header() {
         </nav>
 
         <div className="header-actions">
-          <button className="header-pill" onClick={toggleLang}>
+          <button className="header-pill header-pill-lang" onClick={toggleLang}>
             {t.languageToggle[lang === "en" ? "de" : "en"]}
           </button>
           <button className="header-pill" onClick={toggleTheme}>
-            {theme === "light" ? "\u25D1" : "\u25D0"}
+            {theme === "light" ? "\u2600" : "\u263E"}
           </button>
           <button className="header-burger" onClick={() => setMenuOpen(true)}>
-            \u2630
+            {"\u2630"}
           </button>
         </div>
       </motion.header>
@@ -66,7 +66,7 @@ export default function Header() {
             transition={{ duration: 0.25 }}
           >
             <button className="header-close" onClick={() => setMenuOpen(false)}>
-              \u2715
+              {"\u2715"}
             </button>
             {SECTIONS.map((id) => (
               <button key={id} onClick={() => jumpTo(id)}>

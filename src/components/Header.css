@@ -3,7 +3,7 @@
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 50;
+  z-index: 500;
   display: flex;
   align-items: center;
   gap: 28px;
@@ -61,9 +61,18 @@
   border-radius: 999px;
   width: 36px;
   height: 36px;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-mono);
   transition: border-color 0.2s ease;
+}
+
+.header-pill-lang {
+  font-size: 0.7rem;
+  font-weight: 700;
 }
 
 .header-pill:hover {
@@ -81,7 +90,7 @@
 .header-mobile-menu {
   position: fixed;
   inset: 0;
-  z-index: 60;
+  z-index: 550;
   background: var(--bg);
   display: flex;
   flex-direction: column;
