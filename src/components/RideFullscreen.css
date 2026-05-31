@@ -1,7 +1,7 @@
 .ride-fullscreen {
   position: fixed;
   inset: 0;
-  z-index: 150;
+  z-index: 900;
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   background: var(--bg);
@@ -73,7 +73,7 @@
   position: fixed;
   top: 24px;
   right: 24px;
-  z-index: 160;
+  z-index: 950;
   width: 44px;
   height: 44px;
   border-radius: 50%;
