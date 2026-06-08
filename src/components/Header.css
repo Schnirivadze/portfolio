@@ -48,6 +48,43 @@
   color: var(--accent);
 }
 
+.header-nav-slot {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header-locale-picker {
+  gap: 10px;
+}
+
+.header-flag-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: 4px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.header-flag-btn:hover {
+  transform: scale(1.15);
+  background: var(--bg-sunken);
+}
+
+.header-mobile-locales {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.header-flag-btn-active {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
 .header-actions {
   display: flex;
   align-items: center;
@@ -71,8 +108,7 @@
 }
 
 .header-pill-lang {
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .header-pill:hover {
@@ -116,6 +152,9 @@
 
 @media (max-width: 900px) {
   .header-nav {
+    display: none;
+  }
+  .header-pill-lang {
     display: none;
   }
   .header-burger {

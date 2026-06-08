@@ -7,10 +7,11 @@ import "./Header.css";
 const SECTIONS = ["about", "education", "projects", "rides", "hikes", "contact"];
 
 export default function Header() {
-  const { t, lang, toggleLang } = useLanguage();
+  const { t, lang, setLang, locales } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [pickerOpen, setPickerOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -22,6 +23,13 @@ export default function Header() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setMenuOpen(false);
   };
+
+  const pickLocale = (code) => {
+    setLang(code);
+    setPickerOpen(false);
+  };
+
+  const currentFlag = locales.find((l) => l.code === lang)?.flag;
 
   return (
     <>
@@ -35,17 +43,48 @@ export default function Header() {
           AS
         </button>
 
-        <nav className="header-nav">
-          {SECTIONS.map((id) => (
-            <button key={id} onClick={() => jumpTo(id)}>
-              {t.nav[id]}
-            </button>
-          ))}
-        </nav>
+        <div className="header-nav-slot">
+          <AnimatePresence mode="wait">
+            {pickerOpen ? (
+              <motion.div
+                key="picker"
+                className="header-nav header-locale-picker"
+                initial={{ opacity: 0, y: -6 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -6 }}
+                transition={{ duration: 0.2 }}
+              >
+                {locales.map((l) => (
+                  <button key={l.code} onClick={() => pickLocale(l.code)} title={l.label} className="header-flag-btn">
+                    {l.flag}
+                  </button>
+                ))}
+              </motion.div>
+            ) : (
+              <motion.nav
+                key="nav"
+                className="header-nav"
+                initial={{ opacity: 0, y: -6 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -6 }}
+                transition={{ duration: 0.2 }}
+              >
+                {SECTIONS.map((id) => (
+                  <button key={id} onClick={() => jumpTo(id)}>
+                    {t.nav[id]}
+                  </button>
+                ))}
+              </motion.nav>
+            )}
+          </AnimatePresence>
+        </div>
 
         <div className="header-actions">
-          <button className="header-pill header-pill-lang" onClick={toggleLang}>
-            {t.languageToggle[lang === "en" ? "de" : "en"]}
+          <button
+            className="header-pill header-pill-lang"
+            onClick={() => setPickerOpen((v) => !v)}
+          >
+            {currentFlag}
           </button>
           <button className="header-pill" onClick={toggleTheme}>
             {theme === "light" ? "\u2600" : "\u263E"}
@@ -73,6 +112,18 @@ export default function Header() {
                 {t.nav[id]}
               </button>
             ))}
+            <div className="header-mobile-locales">
+              {locales.map((l) => (
+                <button
+                  key={l.code}
+                  className={`header-flag-btn ${l.code === lang ? "header-flag-btn-active" : ""}`}
+                  onClick={() => setLang(l.code)}
+                  title={l.label}
+                >
+                  {l.flag}
+                </button>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
