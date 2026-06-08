@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "en": { "flag": "\ud83c\uddec\ud83c\udde7", "label": "English" },
+    "de": { "flag": "\ud83c\udde9\ud83c\uddea", "label": "Deutsch" }
+  },
   "en": {
     "nav": {
       "about": "About",
