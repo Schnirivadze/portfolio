@@ -4,7 +4,14 @@ import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
 import "./Header.css";
 
-const SECTIONS = ["about", "education", "projects", "rides", "hikes", "contact"];
+const SECTIONS = ["about", "education", "projects", /*"rides", "hikes",*/ "contact"];
+
+function Flag({ value }) {
+  if (typeof value === "string" && value.startsWith("http")) {
+    return <img src={value} alt="" className="header-flag-img" />;
+  }
+  return value;
+}
 
 export default function Header() {
   const { t, lang, setLang, locales } = useLanguage();
@@ -56,7 +63,7 @@ export default function Header() {
               >
                 {locales.map((l) => (
                   <button key={l.code} onClick={() => pickLocale(l.code)} title={l.label} className="header-flag-btn">
-                    {l.flag}
+                    <Flag value={l.flag} />
                   </button>
                 ))}
               </motion.div>
@@ -84,7 +91,7 @@ export default function Header() {
             className="header-pill header-pill-lang"
             onClick={() => setPickerOpen((v) => !v)}
           >
-            {currentFlag}
+            <Flag value={currentFlag} />
           </button>
           <button className="header-pill" onClick={toggleTheme}>
             {theme === "light" ? "\u2600" : "\u263E"}
@@ -120,7 +127,7 @@ export default function Header() {
                   onClick={() => setLang(l.code)}
                   title={l.label}
                 >
-                  {l.flag}
+                  <Flag value={l.flag} />
                 </button>
               ))}
             </div>

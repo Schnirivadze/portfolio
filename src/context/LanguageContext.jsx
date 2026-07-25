@@ -3,17 +3,22 @@ import data from "../data/data.json";
 
 const LanguageContext = createContext(null);
 
-// every top-level key except "meta" is a locale - add a language by adding a block, nothing else
 const LOCALES = Object.keys(data).filter((key) => key !== "meta");
+
+const LOCALE_REDIRECTS = { ru: "ua" };
 
 function detectDefaultLocale() {
   const saved = localStorage.getItem("lang");
   if (saved && LOCALES.includes(saved)) return saved;
 
-  const browserLang = navigator.language?.slice(0, 2);
+  const browserLang = navigator.language?.slice(0, 2).toLowerCase();
+
+  const redirect = LOCALE_REDIRECTS[browserLang];
+  if (redirect && LOCALES.includes(redirect)) return redirect;
+
   if (browserLang && LOCALES.includes(browserLang)) return browserLang;
 
-  return LOCALES[0];
+  return LOCALES.includes("en") ? "en" : LOCALES[0];
 }
 
 export function LanguageProvider({ children }) {

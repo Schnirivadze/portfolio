@@ -66,6 +66,16 @@
   font-size: 0.9rem;
 }
 
+.contact-error {
+  color: #e0554a;
+  font-size: 0.9rem;
+}
+
+.contact-form button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
 @media (max-width: 900px) {
   .contact-grid {
     grid-template-columns: 1fr;
