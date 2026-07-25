@@ -39,7 +39,7 @@
       "primaryButton": "Get in touch",
       "secondaryButton": "See my work",
       "cvButton": "Download CV",
-      "cvButtonHref": "/Andrii_Seleznov_CV.pdf"
+      "cvButtonHref": "/Andrii_Seleznov_CV_EN.pdf"
     },
     "about": {
       "eyebrow": "About",
@@ -321,7 +321,7 @@
       "primaryButton": "Kontakt aufnehmen",
       "secondaryButton": "Projekte ansehen",
       "cvButton": "Lebenslauf herunterladen",
-      "cvButtonHref": "/Andrii_Seleznov_CV.pdf"
+      "cvButtonHref": "/Andrii_Seleznov_CV_DE.pdf"
     },
     "about": {
       "eyebrow": "Über mich",
@@ -603,7 +603,7 @@
       "primaryButton": "Зв'язатися",
       "secondaryButton": "Переглянути проєкти",
       "cvButton": "Завантажити резюме",
-      "cvButtonHref": "/Andrii_Seleznov_CV.pdf"
+      "cvButtonHref": "/Andrii_Seleznov_CV_UA.pdf"
     },
     "about": {
       "eyebrow": "Про мене",
