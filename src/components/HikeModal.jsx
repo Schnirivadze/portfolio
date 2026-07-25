@@ -12,7 +12,7 @@ export default function HikeModal({ hike, onClose }) {
   const { t } = useLanguage();
   const { theme } = useTheme();
   const h = t.hikes;
-  const [lightboxLabel, setLightboxLabel] = useState(null);
+  const [lightboxImage, setLightboxImage] = useState(null);
 
   const tileUrl =
     theme === "dark"
@@ -20,7 +20,6 @@ export default function HikeModal({ hike, onClose }) {
       : "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
 
   const center = hike.route[Math.floor(hike.route.length / 2)];
-  const galleryLabels = Array.from({ length: 6 }, (_, i) => `${hike.name} #${i + 1}`);
 
   return (
     <motion.div
@@ -58,14 +57,23 @@ export default function HikeModal({ hike, onClose }) {
           <p className="hike-modal-story">{hike.story}</p>
 
           <div className="hike-gallery">
-            {galleryLabels.map((label) => (
-              <PlaceholderImage key={label} label={label} className="hike-gallery-image" onClick={() => setLightboxLabel(label)} />
-            ))}
+            {hike.images.map((src, i) => {
+              const label = `${hike.name} #${i + 1}`;
+              return (
+                <PlaceholderImage
+                  key={i}
+                  src={src}
+                  label={label}
+                  className="hike-gallery-image"
+                  onClick={() => setLightboxImage({ src, label })}
+                />
+              );
+            })}
           </div>
         </div>
       </motion.article>
 
-      <Lightbox label={lightboxLabel} onClose={() => setLightboxLabel(null)} />
+      <Lightbox image={lightboxImage} onClose={() => setLightboxImage(null)} />
     </motion.div>
   );
 }

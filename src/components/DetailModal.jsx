@@ -9,15 +9,17 @@ export default function DetailModal({
   onClose,
   eyebrow,
   title,
-  meta, // array of small strings: period, location...
+  meta, 
   tagline,
   body,
-  tags, // stack or courses
-  images, // array of string labels
+  tags,
+  images,
   githubUrl,
   githubLabel,
+  websiteUrl,
+  websiteLabel,
 }) {
-  const [lightboxLabel, setLightboxLabel] = useState(null);
+  const [lightboxImage, setLightboxImage] = useState(null);
 
   return (
     <AnimatePresence>
@@ -57,12 +59,13 @@ export default function DetailModal({
 
               {images?.length > 0 && (
                 <div className="detail-modal-images">
-                  {images.map((label) => (
+                  {images.map((img) => (
                     <PlaceholderImage
-                      key={label}
-                      label={label}
+                      key={img.label}
+                      src={img.src}
+                      label={img.label}
                       className="detail-modal-image"
-                      onClick={() => setLightboxLabel(label)}
+                      onClick={() => setLightboxImage(img)}
                     />
                   ))}
                 </div>
@@ -80,22 +83,25 @@ export default function DetailModal({
                 </div>
               )}
 
-              {githubUrl !== undefined && (
-                <a
-                  className="btn btn-ghost detail-modal-github"
-                  href={githubUrl || "#"}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={(e) => !githubUrl && e.preventDefault()}
-                >
-                  {githubLabel}
-                </a>
+              {(githubUrl || websiteUrl) && (
+                <div className="detail-modal-links">
+                  {githubUrl && (
+                    <a className="btn btn-ghost" href={githubUrl} target="_blank" rel="noreferrer">
+                      {githubLabel}
+                    </a>
+                  )}
+                  {websiteUrl && (
+                    <a className="btn btn-ghost" href={websiteUrl} target="_blank" rel="noreferrer">
+                      {websiteLabel}
+                    </a>
+                  )}
+                </div>
               )}
             </div>
           </motion.article>
         </motion.div>
       )}
-      <Lightbox label={lightboxLabel} onClose={() => setLightboxLabel(null)} />
+      <Lightbox image={lightboxImage} onClose={() => setLightboxImage(null)} />
     </AnimatePresence>
   );
 }

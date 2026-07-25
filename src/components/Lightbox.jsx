@@ -3,12 +3,12 @@ import { useLanguage } from "../context/LanguageContext";
 import PlaceholderImage from "./PlaceholderImage";
 import "./Lightbox.css";
 
-export default function Lightbox({ label, onClose }) {
+export default function Lightbox({ image, onClose }) {
   const { t } = useLanguage();
 
   return (
     <AnimatePresence>
-      {label && (
+      {image && (
         <motion.div
           className="lightbox"
           initial={{ opacity: 0 }}
@@ -24,7 +24,7 @@ export default function Lightbox({ label, onClose }) {
             transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}
             onClick={(e) => e.stopPropagation()}
           >
-            <PlaceholderImage label={label} className="lightbox-image" />
+            <PlaceholderImage src={image.src} label={image.label} className="lightbox-image" />
             <button className="lightbox-close" onClick={onClose}>
               {t.lightbox.close}
             </button>

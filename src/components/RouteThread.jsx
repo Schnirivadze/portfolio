@@ -2,13 +2,12 @@ import { motion, useScroll } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 import "./RouteThread.css";
 
-// waypoints match the section ids in App.jsx, short codes echo the map's photo-point dots
 const WAYPOINTS = [
   { id: "about", code: "AB" },
   { id: "education", code: "ED" },
   { id: "projects", code: "PR" },
-  { id: "rides", code: "RD" },
-  { id: "hikes", code: "HK" },
+//   { id: "rides", code: "RD" },
+//   { id: "hikes", code: "HK" },
   { id: "contact", code: "CN" },
 ];
 

@@ -12,7 +12,7 @@ export default function RideFullscreen({ ride, onClose }) {
   const { theme } = useTheme();
   const r = t.rides;
   const [highlighted, setHighlighted] = useState(null);
-  const [lightboxLabel, setLightboxLabel] = useState(null);
+  const [lightboxImage, setLightboxImage] = useState(null);
   const photoRefs = useRef({});
 
   const tileUrl =
@@ -69,19 +69,23 @@ export default function RideFullscreen({ ride, onClose }) {
 
         <h3>{r.photosLabel}</h3>
         <div className="ride-photo-list">
-          {ride.photoPoints?.map((p, i) => (
-            <div key={i} ref={(el) => (photoRefs.current[p.image] = el)}>
-              <PlaceholderImage
-                label={`${ride.name} #${p.image + 1}`}
-                className={`ride-photo ${highlighted === p.image ? "ride-photo-highlighted" : ""}`}
-                onClick={() => setLightboxLabel(`${ride.name} #${p.image + 1}`)}
-              />
-            </div>
-          ))}
+          {ride.photoPoints?.map((p, i) => {
+            const label = `${ride.name} #${p.image + 1}`;
+            return (
+              <div key={i} ref={(el) => (photoRefs.current[p.image] = el)}>
+                <PlaceholderImage
+                  src={p.src}
+                  label={label}
+                  className={`ride-photo ${highlighted === p.image ? "ride-photo-highlighted" : ""}`}
+                  onClick={() => setLightboxImage({ src: p.src, label })}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
 
-      <Lightbox label={lightboxLabel} onClose={() => setLightboxLabel(null)} />
+      <Lightbox image={lightboxImage} onClose={() => setLightboxImage(null)} />
     </motion.div>
   );
 }

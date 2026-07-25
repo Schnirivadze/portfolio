@@ -28,7 +28,7 @@ export default function Hikes() {
             animate={visible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: i * 0.1 }}
           >
-            <PlaceholderImage label={hike.name} className="hike-card-image" />
+            <PlaceholderImage src={hike.coverImage} label={hike.name} className="hike-card-image" />
             <div className="hike-card-body">
               <h3>{hike.name}</h3>
               <div className="hike-card-meta">

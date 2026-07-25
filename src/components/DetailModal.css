@@ -82,7 +82,10 @@
   color: var(--text-muted);
 }
 
-.detail-modal-github {
+.detail-modal-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
   margin-top: 8px;
 }
 

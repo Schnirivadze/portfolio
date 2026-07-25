@@ -74,6 +74,9 @@ export default function Hero() {
           <button className="btn btn-ghost" onClick={() => jumpTo("projects")}>
             {t.hero.secondaryButton}
           </button>
+          <a className="btn btn-ghost hero-cv-link" href={t.hero.cvButtonHref} download>
+            {t.hero.cvButton} {"\u2193"}
+          </a>
         </motion.div>
       </div>
     </section>

@@ -22,8 +22,8 @@ export default function App() {
           <About />
           <Education />
           <Projects />
-          <BikeMap />
-          <Hikes />
+          {/* <BikeMap />
+          <Hikes /> */}
           <Contact />
         </main>
         <Footer />

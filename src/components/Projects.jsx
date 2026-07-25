@@ -19,6 +19,7 @@ function ProjectPanel({ project, index, onOpen, viewLabel }) {
       transition={{ duration: 0.6, ease: [0.2, 0.8, 0.2, 1] }}
     >
       <PlaceholderImage
+        src={project.image}
         label={project.name}
         className="project-panel-image"
         onClick={() => onOpen(project)}
@@ -66,9 +67,11 @@ export default function Projects() {
         tagline={active?.tagline}
         body={active?.description}
         tags={active?.stack}
-        images={active ? [active.name] : []}
+        images={active ? [{ src: active.image, label: active.name }] : []}
         githubUrl={active?.github}
         githubLabel={p.viewCode}
+        websiteUrl={active?.website}
+        websiteLabel={p.viewWebsite}
       />
     </section>
   );
